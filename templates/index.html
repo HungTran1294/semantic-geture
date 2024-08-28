@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân loại cảm xúc</title>
+</head>
+<body>
+    <h1>Nhập bình luận phim:</h1>
+    <form method="POST">
+        <textarea name="review" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="Dự đoán">
+    </form>
+
+    {% if review %}
+        <h2>Bình luận: {{ review }}</h2>
+        <h3>Cảm xúc: {{ sentiment }}</h3>
+    {% endif %}
+</body>
+</html>
